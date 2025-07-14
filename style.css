@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+
+/* CSS Variables for theme */
+:root {
+    --bg-color: #f7fafc;
+    --header-bg: #4A5568;
+    --button-bg: #718096;
+    --button-hover: #4A5568;
+    --container-bg: #edf2f7;
+    --border-color: #cbd5e0;
+    --text-color: #2d3748;
+    --button-text: #ffffff;
+    --accent-color: #4299e1;
+    --success-color: #48bb78;
+    --warning-color: #ed8936;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f0f23;
+    --header-bg: #1a1a2e;
+    --button-bg: #16213e;
+    --button-hover: #0f3460;
+    --container-bg: #1a1a2e;
+    --border-color: #16213e;
+    --text-color: #e2e8f0;
+    --button-text: #e2e8f0;
+    --accent-color: #63b3ed;
+    --success-color: #68d391;
+    --warning-color: #f6ad55;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Space Grotesk','Poppins', sans-serif;   
+}
+button{
+    background-color: var(--button-bg);
+    border-radius:12px;
+    padding: 5px;
+    border: none;
+    outline: none;  
+    cursor: pointer; 
+    color: var(--button-text);
+}
+button:hover{
+    background-color: var(--button-hover);
+    color: white;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 100vh;
+}
+*:root {
+    --bg-color: #c8c5c5;
+    --header-bg: #4A5568;
+    --button-bg: #808c9a;
+    --button-hover: #A0AEC0;
+    --container-bg: #808c9a;
+    --border-color: rgb(115, 109, 109);
+    --text-color: #000;
+    --button-text: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --header-bg: #2d3748;
+    --button-bg: #4a5568;
+    --button-hover: #2d3748;
+    --container-bg: #2d3748;
+    --border-color: #4a5568;
+    --text-color: #fff;
+    --button-text: #fff;
+}
+
+button{
+    background-color: #808c9a;
+    border-radius:12px;
+    padding: 5px;
+    border: none;
+    outline: none;  
+    cursor: pointer;
+    color:black;
+    transition: 0.3s; 
+}
+button:hover{
+    background-color: #A0AEC0;
+    color: white;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--header-bg);
+    color: var(--button-text);
+}
+svg{
+    height:20px;
+    width:20px;
+}
+.navbuttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.bt{
+    padding: 14px;
+}
+.menu > svg{
+    height:15px;
+    width:30px;
+}
+.bt > span{
+    font-size: 16px;
+}
+.pomocontainer{
+    max-width:50dvw ;
+    margin: auto;
+    padding: 20px;
+    border:2px solid var(--border-color);
+    margin-top:20px;
+    border-radius: 12px;
+    background-color: var(--container-bg);
+    color: var(--button-text);
+}
+.pomobuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;   
+}
+.pomobuttons > button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+}
+.Timer{
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.controls > button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.focus{
+    text-align: center;
+    padding: 5%;
+    font-size: 40px;
+    font-weight: 500;
+
+}
+.Tasks{
+    max-width:60dvw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.taskbtn{
+    padding: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--button-text);
+    background-color: var(--button-bg);
+} 
+.add{
+    text-align: center;
+    max-width: 50dvw;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    border-style: dashed;
+    color: var(--text-color);
+}
+
+.add:hover{
+    background-color: var(--button-hover);
+    color: var(--button-text);
+    transition: 0.3s;
+    cursor: cell;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 90dvw;
+    margin: 0 auto;
+}
+.notes{
+    border: 2px solid var(--border-color);
+    height: fit-content;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: var(--container-bg);
+    color: var(--button-text);
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.darkmode {
+    height: fit-content;
+    padding: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    border: none;
+}
+
+.darkmode button {
+    background: linear-gradient(135deg, var(--accent-color), var(--success-color));
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    min-width: 140px;
+}
+
+.darkmode button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--success-color), var(--accent-color));
+}
+
+.darkmode button:active {
+    transform: translateY(0);
+}
+
+[data-theme="dark"] .darkmode button {
+    background: linear-gradient(135deg, #ffa726, #ff7043);
+    box-shadow: 0 4px 15px rgba(255, 167, 38, 0.3);
+}
+
+[data-theme="dark"] .darkmode button:hover {
+    background: linear-gradient(135deg, #ff7043, #ffa726);
+    box-shadow: 0 8px 25px rgba(255, 167, 38, 0.4);
+}
+
+/* Enhanced transitions for theme switching */
+header, .pomocontainer, .notes, .darkmode, .Tasks, .add {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add a subtle glow effect for dark mode */
+[data-theme="dark"] .pomocontainer {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .notes,
+[data-theme="dark"] .darkmode {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Improve focus states */
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.darkmode button:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Icon styles for dark mode toggle */
+.theme-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+.text{
+    margin-top:50px;
+    margin-bottom:50px;
+
+}
